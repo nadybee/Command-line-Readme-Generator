@@ -17,7 +17,10 @@
 /*Questions -- user inputs github name and link is added 
 with instructions on how to reach user*/ 
 
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
+const generateMarkdown = require('./utlities/generateMarkdown');
+const markdown = require('./utlities/generateMarkdown')
+const fs = require('fs')
 
 const questions = [
     {
@@ -33,13 +36,13 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'installation',
-        message: 'how do you install this application?',
+        name: 'usage',
+        message: 'how do you use this application?',
     },
 
     {
         type: 'input',
-        name: 'usage',
+        name: 'installation',
         message: 'how do you install this application?',
     },
 
@@ -69,24 +72,45 @@ const questions = [
         type: 'input',
         name: 'github',
         message: 'enter you github username',
+        filter(val){
+            return val.toLowerCase();
+        }
     },
+
     {
         type: 'input',
         name: 'email',
         message: 'enter your email',
+        filter(val){
+            return val.toLowerCase();
+        }
     },
 
 ]
 
-async function runQuestions(){
+async function init(){
     return inquirer.prompt(questions)
     .then ((answers)=> {
-        console.log(answers)
-        return answers
+        const results = generateMarkdown(answers)
+        console.log(results)
+        writeToFile('README.md', results)
     })
     .catch((error)=>{
         console.log(error)
     })
 }
 
-runQuestions()
+
+
+// // TODO: Create a function to write README file
+function writeToFile(fileName, data) { 
+    fs.writeFile(fileName, data, (err) =>
+  // TODO: Describe how this ternary operator works
+  err ? console.error(err) : console.log('Commit logged!')
+);
+
+}
+
+
+
+init()
