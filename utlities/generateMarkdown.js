@@ -4,9 +4,7 @@ const renderLicenseBadge =(license) =>{
   const badges = {
     mit: `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`,
     isc: `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)`,
-    gnuplv3: `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-
-    `
+    gnuplv3: `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
 
   }
   return badges[license]
@@ -72,7 +70,7 @@ const generateMarkdown = (answers) => {
   ## Questions
   If you have questions about this project, please contact developer at:
   - email: ${answers.email} 
-  - github: [link](https://github.com/${answers.github})
+  - [GitHub](https://github.com/${answers.github})
 
   ## License
   ${renderedLicense}
