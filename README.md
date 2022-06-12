@@ -1,5 +1,9 @@
 
+
   # README Generator
+  
+   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
+
   ## Table of Contents
   - [Project description](#Description)
   - [Useage](#Usage)
@@ -9,13 +13,13 @@
   - [License](#License)
 
   ## Description
-  A user can use this application to quickly create a professional readme file.
+  Users can quickly create and save a professional readme file for their project from the command line.
 
   ## Usage
-  This application runs in the terminal on the command line using node.js
+  This application is run in the terminal from the command line using node.js.
 
   ## Installation
-  first `npm install` to download dependencies then `npm start` or `node index.js` to run the application.
+  First download the dependencies by running `npm install` then run the application using `npm start` or `node index.js`
 
   ## Contributors
   Natalie Fairbourne
@@ -25,12 +29,10 @@
 
   ## Questions
   If you have questions about this project, please contact developer at:
-  - email: natalie@yoodlize.com 
+  - natalie@yoodlize.com 
   - [GitHub](https://github.com/nadybee)
 
   ## License
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [MIT](https://opensource.org/licenses/MIT)
-
-
+   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
 
