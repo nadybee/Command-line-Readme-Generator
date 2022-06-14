@@ -67,6 +67,9 @@ const questions = [
 ]
 /** saves README file to output folder */
 function writeToFile(fileName, data) {
+  if (!fs.existsSync('output')) {
+    fs.mkdirSync('output');
+  }
   fs.writeFileSync(`./output/${fileName}`, data, (err) =>
     // TODO: Describe how this ternary operator works
     err ? console.error(err) : console.log("Commit logged!")
