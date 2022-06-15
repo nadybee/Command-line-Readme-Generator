@@ -17,9 +17,11 @@
 
   ## Usage
   This application is run in the terminal from the command line using node.js. You will find the generated readme file in the output folder.
+  To see how this application is used, please refer to this [video](https://drive.google.com/file/d/1HXIKOIWJ8HH43REazcBDxLJNeadzeluz/view).
 
   ## Installation
   First download the dependencies by running `npm install` then run the application using `npm start` or `node index.js` After you run the program and and answer the questions, your file will be saved in the [output folder](./output/) for your use.
+  
 
   ## Contributors
   Natalie Fairbourne
